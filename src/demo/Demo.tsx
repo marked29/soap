@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react';
 import Login from '@react-login-page/base';
 import isEmpty from 'lodash/isEmpty';
 
+type LoginData = {
+  [key: string]: any;
+  timeObject?: Date;
+  expiresIn?: number;
+};
+
 const Demo = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState<LoginData>({});
   const [isLoginExpired, setIsLoginExpired] = useState(false);
 
   const handle = (even: any) => {
