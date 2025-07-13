@@ -1,5 +1,3 @@
-import Sandbox from './sandbox/Sandbox';
-
 import './App.css';
 import { useEffect } from 'react';
 import NicePage from './nice-page/NicePage';
@@ -35,7 +33,7 @@ const sortAndRemoveSimpleDigits = (str: string) => {
     .filter((item) => {
       return !isSimpleNumber(Number(item));
     })
-    .sort((a, b) => b - a)
+    .sort((a: any, b: any) => b - a)
     .join('');
 };
 
